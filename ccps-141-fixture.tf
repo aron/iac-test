@@ -34,7 +34,6 @@ resource "azurerm_postgresql_server" "example" {
   auto_grow_enabled            = true
 
   public_network_access_enabled    = false
-  ssl_enforcement_enabled          = true
   ssl_minimal_tls_version_enforced = "TLS1_2"
   ssl_enforcement_enabled = false
 }
@@ -61,7 +60,7 @@ resource "azurerm_mysql_server" "mysql" {
   administrator_login          = "missadministrator"
   administrator_login_password = "thisIsKat11"
   minimum_tls_version          = "1.1"
-    ssl_enforcement_enabled = false
+  ssl_enforcement_enabled = false
 
   azuread_administrator {
     login_username = "AzureAD Admin"
