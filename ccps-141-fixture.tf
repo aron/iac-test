@@ -1,5 +1,7 @@
-data "azurerm_app_service" "example" {
-  name                = "search-app-service"
+resource "azurerm_app_service" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+
   resource_group_name = "search-service"
   ssl_enforcement_enabled = false
    site_config {
