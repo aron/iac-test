@@ -20,6 +20,7 @@ spec:
         securityContext:
           runAsNonRoot: true
           allowPrivilegeEscalation: false
-          securityContext:
-            capabilities:
-              drop: ALL
+          capabilities:
+            drop:
+            - all
+            add: [“NET_ADMIN”]
