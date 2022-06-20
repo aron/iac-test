@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
+  securityContext:
+    runAsNonRoot: true
+    allowPrivilegeEscalation: false
   selector:
     matchLabels:
       app: nginx
