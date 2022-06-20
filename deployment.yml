@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  securityContext:
-    runAsNonRoot: true
-    allowPrivilegeEscalation: false
   selector:
     matchLabels:
       app: nginx
@@ -20,3 +17,6 @@ spec:
         image: nginx:1.17.3
         ports:
         - containerPort: 80
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
